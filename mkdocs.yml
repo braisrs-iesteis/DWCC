@@ -27,6 +27,7 @@ nav:
   - Variables en JS: 01_variables.md
   - Asincronía en JS: Programación Asíncrona.md
   - Manipulación del DOM: Manipulación del DOM.md
+  - Temporal API: Temporal API.md
 
 # Extensiones básicas
 markdown_extensions:
@@ -37,7 +38,7 @@ markdown_extensions:
       anchor_linenums: true
       line_spans: __span
       pygments_lang_class: true
-      linenums: true  
+      linenums: true
   - pymdownx.inlinehilite
   - pymdownx.tabbed:
       alternate_style: true
