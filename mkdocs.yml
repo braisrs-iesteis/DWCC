@@ -24,9 +24,12 @@ theme:
 
 # Navegación
 nav:
+  - HTML5 + Formularios: HTML5 y Formularios.md
   - Variables en JS: 01_variables.md
+  - Spread y Destructuring: Spread y Destructuring.md
   - Asincronía en JS: Programación Asíncrona.md
   - Manipulación del DOM: Manipulación del DOM.md
+  - Eventos en JS: Eventos en JavaScript.md
   - Temporal API: Temporal API.md
 
 # Extensiones básicas
