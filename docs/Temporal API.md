@@ -11,7 +11,8 @@ npm install @js-temporal/polyfill
 ```
 
 ```javascript
-import { Temporal } from "@js-temporal/polyfill";
+import { Temporal } from "https://esm.sh/@js-temporal/polyfill";
+import { Temporal } from "@js-temporal/polyfill"; //Si usas algún bundler;
 ```
 
 [📚 Documentación oficial](https://tc39.es/proposal-temporal/docs/)
