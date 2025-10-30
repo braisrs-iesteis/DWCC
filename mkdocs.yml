@@ -30,6 +30,7 @@ nav:
   - Asincronía en JS: Programación Asíncrona.md
   - Manipulación del DOM: Manipulación del DOM.md
   - Eventos en JS: Eventos en JavaScript.md
+  - Cookies vs LocalStorage: Cookies vs LocalStorage.md
   - Temporal API: Temporal API.md
 
 # Extensiones básicas
