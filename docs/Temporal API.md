@@ -359,6 +359,7 @@ console.log(fechaHora.toString()); // '2025-10-16T14:30:00'
 
 [📚 Documentación MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/toString)
 
+
 ### `toLocaleString()`
 
 Formatea según la configuración regional.
@@ -380,6 +381,33 @@ console.log(
   })
 );
 // 'jueves, 16 de octubre de 2025'
+```
+
+---
+
+### Formateo manual con `padStart()`
+
+A veces necesitas un formato personalizado (por ejemplo, YYYY-MM-DD o DD/MM/YYYY). Puedes usar `padStart()` para rellenar con ceros a la izquierda:
+
+```javascript
+const fecha = Temporal.PlainDate.from("2025-3-7");
+
+// Formato YYYY-MM-DD
+const year = fecha.year;
+const month = String(fecha.month).padStart(2, '0');
+const day = String(fecha.day).padStart(2, '0');
+const formatoISO = `${year}-${month}-${day}`;
+console.log(formatoISO); // '2025-03-07'
+
+// Formato DD/MM/YYYY
+const formatoEuropeo = `${day}/${month}/${year}`;
+console.log(formatoEuropeo); // '07/03/2025'
+
+// También puedes formatear horas y minutos
+const hora = Temporal.PlainTime.from({ hour: 8, minute: 5 });
+const h = String(hora.hour).padStart(2, '0');
+const m = String(hora.minute).padStart(2, '0');
+console.log(`${h}:${m}`); // '08:05'
 ```
 
 [📚 Documentación MDN](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Temporal/PlainDate/toLocaleString)
