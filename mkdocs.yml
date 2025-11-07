@@ -25,11 +25,14 @@ theme:
 # Navegación
 nav:
   - HTML5 + Formularios: HTML5 y Formularios.md
+  - Expresiones Regulares en JS: Expresiones Regulares en JavaScript.md
   - Variables en JS: 01_variables.md
   - Spread y Destructuring: Spread y Destructuring.md
   - Asincronía en JS: Programación Asíncrona.md
   - Manipulación del DOM: Manipulación del DOM.md
   - Eventos en JS: Eventos en JavaScript.md
+  - APIs REST en JS: APIs REST y Verbos HTTP.md
+  - JSON en JS: Manejo de JSON en JavaScript.md
   - Cookies vs LocalStorage: Cookies vs LocalStorage.md
   - Temporal API: Temporal API.md
 
