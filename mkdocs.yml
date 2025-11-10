@@ -30,7 +30,7 @@ nav:
   - Variables en JS: Types-Variables.md
   - Spread y Destructuring: Spread-Destructuring.md
   - Asincronía en JS: Async.md
-  - Manipulación del DOM: Dom.md
+  - Manipulación del DOM: DOM.md
   - Eventos en JS: Events.md
   - APIs REST en JS: REST.md
   - JSON en JS: JSON.md
