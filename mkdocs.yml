@@ -36,6 +36,7 @@ nav:
   - JSON en JS: JSON.md
   - Cookies vs LocalStorage: Cookies-LocalStorage.md
   - Temporal API: Temporal-API.md
+  - jQuery + AJAX: jQuery-AJAX.md
 
 # Extensiones básicas
 markdown_extensions:
@@ -54,5 +55,6 @@ markdown_extensions:
   - attr_list
 # Plugin de búsqueda
 plugins:
+  #  - offline
   - search:
       lang: es
