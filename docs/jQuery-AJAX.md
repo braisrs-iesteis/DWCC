@@ -709,6 +709,7 @@ El operador `#` (hash) en las URLs permite crear navegación sin recargar la pá
 ### Concepto básico del Hash
 
 El hash es la parte de la URL después del símbolo `#`. Por ejemplo:
+
 - `http://ejemplo.com/#inicio`
 - `http://ejemplo.com/#productos`
 - `http://ejemplo.com/#contacto`
@@ -940,7 +941,9 @@ window.location.hash = "#nueva-seccion";
             titulo: "Usuarios",
             breadcrumb: "🏠 Inicio / 👥 Usuarios",
             cargar: function () {
-              $("#contenido").html('<p class="loading">Cargando usuarios...</p>');
+              $("#contenido").html(
+                '<p class="loading">Cargando usuarios...</p>'
+              );
 
               $.getJSON("https://jsonplaceholder.typicode.com/users?_limit=5")
                 .done(function (usuarios) {
@@ -1002,7 +1005,9 @@ window.location.hash = "#nueva-seccion";
             titulo: "Álbumes",
             breadcrumb: "🏠 Inicio / 📷 Álbumes",
             cargar: function () {
-              $("#contenido").html('<p class="loading">Cargando álbumes...</p>');
+              $("#contenido").html(
+                '<p class="loading">Cargando álbumes...</p>'
+              );
 
               $.getJSON("https://jsonplaceholder.typicode.com/albums?_limit=6")
                 .done(function (albums) {
@@ -1147,7 +1152,9 @@ $(function () {
       // Buscar ruta con parámetros (ej: usuario/123)
       for (let patron in this.rutas) {
         if (patron.includes(":")) {
-          const regex = new RegExp("^" + patron.replace(/:[^\/]+/g, "([^/]+)") + "$");
+          const regex = new RegExp(
+            "^" + patron.replace(/:[^\/]+/g, "([^/]+)") + "$"
+          );
           const match = hash.match(regex);
 
           if (match) {
@@ -1192,13 +1199,14 @@ $(function () {
   router.ruta("post/:id", function (id) {
     $("#contenido").html(`<h2>Post #${id}</h2><p>Cargando...</p>`);
 
-    $.getJSON(`https://jsonplaceholder.typicode.com/posts/${id}`)
-      .done(function (post) {
+    $.getJSON(`https://jsonplaceholder.typicode.com/posts/${id}`).done(
+      function (post) {
         $("#contenido").html(`
           <h2>${post.title}</h2>
           <p>${post.body}</p>
         `);
-      });
+      }
+    );
   });
 
   // Iniciar router
@@ -1216,7 +1224,7 @@ $(function () {
 ```
 
 !!! tip "Consejo"
-    Para aplicaciones modernas más complejas, considera usar librerías especializadas como React Router, Vue Router, o el History API nativo del navegador con `pushState()` para URLs más limpias sin el símbolo `#`.
+Para aplicaciones modernas más complejas, considera usar librerías especializadas como React Router, Vue Router, o el History API nativo del navegador con `pushState()` para URLs más limpias sin el símbolo `#`.
 
 [📚 Documentación MDN - window.location.hash](https://developer.mozilla.org/es/docs/Web/API/Location/hash)
 
