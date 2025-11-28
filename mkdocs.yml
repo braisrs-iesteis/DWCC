@@ -55,6 +55,5 @@ markdown_extensions:
   - attr_list
 # Plugin de búsqueda
 plugins:
-  #  - offline
   - search:
       lang: es
