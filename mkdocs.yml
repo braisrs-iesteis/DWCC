@@ -37,6 +37,7 @@ nav:
   - Cookies vs LocalStorage: Cookies-LocalStorage.md
   - Temporal API: Temporal-API.md
   - jQuery + AJAX: jQuery-AJAX.md
+  - Introducción a React: React.md
 
 # Extensiones básicas
 markdown_extensions:
