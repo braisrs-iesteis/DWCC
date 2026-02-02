@@ -35,6 +35,7 @@ nav:
   - APIs REST en JS: REST.md
   - JSON en JS: JSON.md
   - Cookies vs LocalStorage: Cookies-LocalStorage.md
+  - Date en JS: Date.md
   - Temporal API: Temporal-API.md
   - jQuery + AJAX: jQuery-AJAX.md
   - React:
@@ -44,8 +45,11 @@ nav:
       - Hooks Básicos: react/hooks-basicos.md
       - Hooks Avanzados: react/hooks-avanzados.md
       - Custom Hooks: react/custom-hooks.md
+      - React Router: react/react-router.md
+      - Formularios: react/formularios.md
       - Eventos y Buenas Prácticas: react/eventos-practicas.md
       - Ecosistema y Conclusión: react/ecosistema.md
+
 
 
 markdown_extensions:
