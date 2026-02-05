@@ -1,10 +1,10 @@
 site_name: Apuntes DWCSS
 site_description: Apuntes módulo 2ºDAW DWCSS
 
-# Tema
 theme:
   name: material
   language: es
+  font: false # IMPORTANTE: Evita que busque fuentes en Google Fonts
   palette:
     - scheme: default
       toggle:
@@ -14,14 +14,14 @@ theme:
       toggle:
         icon: material/weather-night
         name: Cambiar a modo claro
-
   features:
-    #    - navigation.tabs
     - navigation.expand
     - navigation.top
     - search.highlight
     - content.code.copy
-# use_directory_urls: false
+
+# OBLIGATORIO para funcionamiento offline (index.html en lugar de carpetas)
+use_directory_urls: false
 
 # Navegación
 nav:
@@ -35,10 +35,23 @@ nav:
   - APIs REST en JS: REST.md
   - JSON en JS: JSON.md
   - Cookies vs LocalStorage: Cookies-LocalStorage.md
+  - Date en JS: Date.md
   - Temporal API: Temporal-API.md
   - jQuery + AJAX: jQuery-AJAX.md
+  - React:
+      - Introducción: react/introduccion.md
+      - Componentes y Props: react/componentes.md
+      - JSX: react/jsx.md
+      - Hooks Básicos: react/hooks-basicos.md
+      - Hooks Avanzados: react/hooks-avanzados.md
+      - Custom Hooks: react/custom-hooks.md
+      - React Router: react/react-router.md
+      - Formularios: react/formularios.md
+      - Eventos y Buenas Prácticas: react/eventos-practicas.md
+      - Ecosistema y Conclusión: react/ecosistema.md
 
-# Extensiones básicas
+
+
 markdown_extensions:
   - admonition
   - pymdownx.details
@@ -53,7 +66,8 @@ markdown_extensions:
       alternate_style: true
   - tables
   - attr_list
-# Plugin de búsqueda
+
 plugins:
   - search:
       lang: es
+  - offline
