@@ -91,3 +91,42 @@ Aunque el compilador es muy potente, hay casos donde aún tiene sentido la memoi
 
 !!! warning "Consejo de Transición"
     Si tu proyecto aún usa React 18 o anterior, `useMemo` y `useCallback` siguen siendo esenciales. Pero si estás en React 19+, úsalos solo si detectas problemas de rendimiento con las herramientas de React DevTools.
+
+### React.memo: Memoización de Componentes
+
+`React.memo` es un **Higher-Order Component (HOC)** que envuelve un componente para evitar que se re-renderice si sus props no han cambiado.
+
+```javascript
+const ExpensiveComponent = React.memo(function ExpensiveComponent({ data }) {
+  console.log("Renderizado!");
+  return <div>{/* Renderizado costoso */}</div>;
+});
+
+// Ahora solo se renderiza cuando 'data' cambia realmente
+<ExpensiveComponent data={items} />
+```
+
+#### Comparación Personalizada
+
+Por defecto, `React.memo` hace una comparación superficial de las props. Puedes personalizar esta lógica:
+
+```javascript
+const MyComponent = React.memo(
+  ({ user }) => <div>{user.name}</div>,
+  (prevProps, nextProps) => {
+    // Retorna true si las props son iguales (NO re-renderizar)
+    // Retorna false si las props son diferentes (SÍ re-renderizar)
+    return prevProps.user.id === nextProps.user.id;
+  }
+);
+```
+
+!!! tip "Cuándo Usar React.memo"
+    - Componentes que renderizan con frecuencia con las mismas props.
+    - Componentes "pesados" que procesan muchas visualizaciones (listas grandes, gráficos).
+    - Componentes puros que dependen únicamente de sus props.
+
+!!! danger "Cuándo NO Usar React.memo"
+    - Componentes pequeños y rápidos (el overhead de la comparación puede ser peor que re-renderizar).
+    - Cuando las props cambian constantemente (la memoización no aportará nada).
+    - En proyectos con React 19+ donde el compilador ya optimiza automáticamente.
