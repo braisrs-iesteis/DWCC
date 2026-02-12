@@ -144,7 +144,7 @@ for i_html in range(len(htmls)):
     if re.match("^[\\n\\r ]*$", line): # empty lines
       lines_removed += 1
 
-    if re.match(".* src=\"https?://", line): # external js
+    elif re.match(".* src=\"https?://", line): # external js
       line = re.sub(" src=\"(.*[^\"])\"", lambda s: " src=\"" + pre_fetch(s, htmls[i_html]) + "\"", line)
       output.append(line)
       if not changed:
